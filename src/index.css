@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.App {
+  font-family: "Antonio";
+  color: #fff;
+  min-height: 100vh;
+  background-color: black;
+  padding-bottom: 3rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  height: 68px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.header__logo {
+  text-transform: uppercase;
+  font-size: 1.75rem;
+}
+.header__hamburger {
+  cursor: pointer;
+  z-index: 2;
+}
+
+.mobile-menu {
+  z-index: 1;
+  padding-top: 1.5rem;
+  margin-top: 68px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: black;
+}
+.mobile-menu__link:active {
+  text-decoration: none;
+}
+.mobile-menu__item-container {
+  padding: 0 1.5rem;
+}
+.mobile-menu__item {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 0.5rem 1.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+}
+.mobile-menu__item__bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+.mobile-menu__item__bullet.mercury {
+  background-color: #def4fc;
+}
+.mobile-menu__item__bullet.venus {
+  background-color: #f7cc7f;
+}
+.mobile-menu__item__bullet.earth {
+  background-color: #545bfe;
+}
+.mobile-menu__item__bullet.mars {
+  background-color: #ff6a45;
+}
+.mobile-menu__item__bullet.jupiter {
+  background-color: #ecad7a;
+}
+.mobile-menu__item__bullet.saturn {
+  background-color: #fccb6b;
+}
+.mobile-menu__item__bullet.uranus {
+  background-color: #65f0d5;
+}
+.mobile-menu__item__bullet.neptune {
+  background-color: #497efa;
+}
+.mobile-menu__item__name {
+  font-size: 0.9375rem;
+  letter-spacing: 1.36px;
+  font-family: "Spartan";
+  text-transform: uppercase;
+  margin-right: auto;
+  padding-left: 1.5rem;
+}
+
+.planet-slider {
+  padding: 1.5rem;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-family: "Spartan";
+  font-size: 0.5625rem;
+  letter-spacing: 1.92857px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.planet-slider a {
+  color: white;
+  text-decoration: none;
+}
+
+.slider-link {
+  padding-bottom: 1rem;
+  color: red;
+}
+
+.slider-link__active {
+  color: white;
+  border-bottom: 4px solid #419ebb;
+}
+
+.planet-detail {
+  padding: 1.5rem;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.overview__img {
+  position: absolute;
+  display: block;
+  width: 50%;
+}
+.overview__name {
+  margin-top: 300px;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.overview__content {
+  text-align: center;
+  font-family: "Spartan";
+  font-weight: 300;
+  font-size: 0.6875rem;
+  line-height: 22px;
+  margin-top: 1rem;
+}
+.overview__source {
+  font-size: 0.75rem;
+  font-family: "Spartan";
+  color: rgba(255, 255, 255, 0.5);
+  padding-top: 2rem;
+}
+.overview__source--link {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+  margin: 1.75rem 1.5rem;
+}
+
+.stat {
+  list-style-type: none;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+.stat--name {
+  font-size: 0.5rem;
+  font-family: "Spartan";
+  color: rgba(255, 255, 255, 0.5);
+}
+.stat--number {
+  font-size: 1.25rem;
+}/*# sourceMappingURL=index.css.map */

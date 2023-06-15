@@ -1,0 +1,218 @@
+$white: #fff;
+$black-600: #070724;
+$grey-600: #38384f;
+$grey-400: #838391;
+$teal: #419ebb;
+$yellow: #eda249;
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
+
+$purple: #6f2ed6;
+$red: #d83a34;
+$red-orange: #d14c32;
+$orange: #cd5120;
+$green: #1ec2a4;
+$blue: #2d68f0;
+
+$mercury: #def4fc;
+$venus: #f7cc7f;
+$earth: #545bfe;
+$mars: #ff6a45;
+$jupiter: #ecad7a;
+$saturn: #fccb6b;
+$uranus: #65f0d5;
+$neptune: #497efa;
+
+$font-antonio: "Antonio";
+$font-spartan: "Spartan";
+
+$headerHeight: 68px;
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.App {
+  font-family: $font-antonio;
+  color: $white;
+  min-height: 100vh;
+  background-color: black;
+  padding-bottom: 3rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  height: $headerHeight;
+  border-bottom: 1px solid rgba(white, 0.2);
+  &__logo {
+    text-transform: uppercase;
+    font-size: 1.75rem;
+  }
+  &__hamburger {
+    cursor: pointer;
+    z-index: 2;
+  }
+}
+
+.mobile-menu {
+  z-index: 1;
+  padding-top: 1.5rem;
+  margin-top: $headerHeight;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: black;
+  &__link {
+    &:active {
+      text-decoration: none;
+    }
+  }
+  &__item-container {
+    padding: 0 1.5rem;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 0.5rem 1.25rem 0;
+    border-bottom: 1px solid rgba(white, 0.1);
+    color: white;
+    text-decoration: none;
+    &__bullet {
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      &.mercury {
+        background-color: $mercury;
+      }
+      &.venus {
+        background-color: $venus;
+      }
+      &.earth {
+        background-color: $earth;
+      }
+      &.mars {
+        background-color: $mars;
+      }
+      &.jupiter {
+        background-color: $jupiter;
+      }
+      &.saturn {
+        background-color: $saturn;
+      }
+      &.uranus {
+        background-color: $uranus;
+      }
+      &.neptune {
+        background-color: $neptune;
+      }
+    }
+    &__name {
+      font-size: 0.9375rem;
+      letter-spacing: 1.36px;
+      font-family: $font-spartan;
+      text-transform: uppercase;
+      margin-right: auto;
+      padding-left: 1.5rem;
+    }
+  }
+}
+
+.planet-slider {
+  padding: 1.5rem;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-family: $font-spartan;
+  font-size: 0.5625rem;
+  letter-spacing: 1.92857px;
+  border-bottom: 1px solid rgba(white, 0.2);
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.slider-link {
+  padding-bottom: 1rem;
+  color: red;
+}
+
+.slider-link__active {
+  color: white;
+  border-bottom: 4px solid $teal;
+}
+.planet-detail {
+  padding: 1.5rem;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__img {
+    position: absolute;
+    display: block;
+    width: 50%;
+  }
+  &__name {
+    margin-top: 300px;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  &__content {
+    text-align: center;
+    font-family: $font-spartan;
+    font-weight: 300;
+    font-size: 0.6875rem;
+    line-height: 22px;
+    margin-top: 1rem;
+  }
+  &__source {
+    font-size: 0.75rem;
+    font-family: $font-spartan;
+    color: rgba(white, 0.5);
+    padding-top: 2rem;
+    &--link {
+      color: rgba(white, 0.5);
+      text-decoration: underline;
+    }
+  }
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+  margin: 1.75rem 1.5rem;
+}
+.stat {
+  list-style-type: none;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(white, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  &--name {
+    font-size: 0.5rem;
+    font-family: $font-spartan;
+    color: rgba(white, 0.5);
+  }
+  &--number {
+    font-size: 1.25rem;
+  }
+}
