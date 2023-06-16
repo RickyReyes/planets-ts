@@ -153,11 +153,14 @@ a {
   color: white;
   border-bottom: 4px solid $teal;
 }
-.planet-detail {
-  padding: 1.5rem;
+.planet {
+  &__detail {
+    padding: 1.5rem;
+    position: relative;
+  }
 }
 
-.overview {
+.planet-detail {
   display: flex;
   flex-direction: column;
   align-items: center;

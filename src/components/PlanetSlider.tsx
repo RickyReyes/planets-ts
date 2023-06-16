@@ -18,7 +18,7 @@ export default function PlanetSlider() {
         className={({ isActive }) =>
           isActive ? "slider-link__active" : "slider-link"
         }
-        to="structure"
+        to={`/${planet}/structure`}
       >
         Structure
       </NavLink>
@@ -26,7 +26,7 @@ export default function PlanetSlider() {
         className={({ isActive }) =>
           isActive ? "slider-link__active" : "slider-link"
         }
-        to="surface"
+        to={`/${planet}/surface`}
       >
         Surface
       </NavLink>

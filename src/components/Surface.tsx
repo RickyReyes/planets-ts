@@ -1,9 +1,6 @@
-import { Planet as PlanetType } from "../types";
-
-interface ISurfaceProps {
-  currentPlanet: PlanetType | null;
-}
-
-export default function Surface({ currentPlanet }: ISurfaceProps) {
-  return <div>{currentPlanet?.name}</div>;
+import { usePlanet } from "../hooks/usePlanet";
+import PlanetDetail from "./PlanetDetail";
+export default function Overview() {
+  const { currentPlanet } = usePlanet();
+  return <PlanetDetail currentPlanet={currentPlanet} view="surface" />;
 }

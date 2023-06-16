@@ -1,7 +1,6 @@
 import { useParams, Outlet } from "react-router-dom";
 import { Planet as PlanetType } from "../types";
 import { useState, useEffect } from "react";
-import PlanetSlider from "../components/PlanetSlider";
 import Stats from "../components/Stats";
 
 export default function Planet() {
@@ -24,8 +23,7 @@ export default function Planet() {
   if (!currentPlanet) return <h1>Loading...</h1>;
   return (
     <section className="planet">
-      <PlanetSlider />
-      <div className="planet-detail">
+      <div className="planet__detail">
         <Outlet context={{ currentPlanet }} />
       </div>
       <Stats currentPlanet={currentPlanet} />
