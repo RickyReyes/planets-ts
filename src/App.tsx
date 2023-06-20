@@ -27,7 +27,11 @@ export default function App() {
         <MobileMenu setShowMobileMenu={setShowMobileMenu} planets={planets} />
       )}
       <Routes>
-        <Route element={<Layout setShowMobileMenu={setShowMobileMenu} />}>
+        <Route
+          element={
+            <Layout planets={planets} setShowMobileMenu={setShowMobileMenu} />
+          }
+        >
           <Route path="/" element={<Planet />}>
             <Route index element={<Overview />} />
           </Route>

@@ -40,31 +40,6 @@ a {
   text-decoration: none;
 }
 
-.App {
-  font-family: $font-antonio;
-  color: $white;
-  min-height: 100vh;
-  background-color: black;
-  padding-bottom: 3rem;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1.5rem;
-  height: $headerHeight;
-  border-bottom: 1px solid rgba(white, 0.2);
-  &__logo {
-    text-transform: uppercase;
-    font-size: 1.75rem;
-  }
-  &__hamburger {
-    cursor: pointer;
-    z-index: 2;
-  }
-}
-
 .mobile-menu {
   z-index: 1;
   padding-top: 1.5rem;
@@ -128,7 +103,46 @@ a {
   }
 }
 
+.App {
+  font-family: $font-antonio;
+  color: $white;
+  min-height: 100vh;
+  background-color: black;
+  padding-bottom: 3rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  height: $headerHeight;
+  border-bottom: 1px solid rgba(white, 0.2);
+  &__logo {
+    text-transform: uppercase;
+    font-size: 1.75rem;
+  }
+  &__hamburger {
+    cursor: pointer;
+    z-index: 2;
+  }
+}
+
 .planet-slider {
+  a {
+    color: rgba(white, 0.2);
+    text-decoration: none;
+  }
+}
+
+.planet-nav {
+  display: none;
+  &__hr {
+    display: none;
+  }
+}
+
+.slider {
   padding: 1.5rem;
   padding-bottom: 0;
   display: flex;
@@ -138,21 +152,12 @@ a {
   font-size: 0.5625rem;
   letter-spacing: 1.92857px;
   border-bottom: 1px solid rgba(white, 0.2);
-  a {
+  &__link {
     color: white;
-    text-decoration: none;
+    padding-bottom: 1rem;
   }
 }
 
-.slider-link {
-  padding-bottom: 1rem;
-  color: red;
-}
-
-.slider-link__active {
-  color: white;
-  border-bottom: 4px solid $teal;
-}
 .planet {
   &__detail {
     padding: 1.5rem;
@@ -164,10 +169,18 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  &__img {
+  &__img-container {
     position: absolute;
+    width: 100%;
+    height: 300px;
+  }
+  &__img {
     display: block;
-    width: 50%;
+    position: absolute;
+    transform: scale(0.5) translateX(-100%) translateY(-50%);
+    left: 50%;
+    top: 50%;
+    transform-origin: top;
   }
   &__name {
     margin-top: 300px;
@@ -175,13 +188,14 @@ a {
     font-size: 2.5rem;
     text-align: center;
   }
-  &__content {
+  &__text {
     text-align: center;
     font-family: $font-spartan;
     font-weight: 300;
     font-size: 0.6875rem;
     line-height: 22px;
     margin-top: 1rem;
+    max-width: 35ch;
   }
   &__source {
     font-size: 0.75rem;
@@ -217,5 +231,39 @@ a {
   }
   &--number {
     font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .header {
+    border-bottom: 0;
+    padding-top: 2rem;
+    &__logo {
+      margin: auto;
+    }
+    &__hamburger {
+      display: none;
+    }
+  }
+  .planet-slider {
+    display: none;
+  }
+  .planet-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    margin: 2.5rem auto 1.75rem;
+    text-transform: uppercase;
+    font-family: $font-spartan;
+    max-width: 665px;
+    &__link {
+      font-size: 0.6875rem;
+      color: white;
+    }
+    &__hr {
+      display: block;
+      color: rgba(white, 0.2);
+    }
   }
 }

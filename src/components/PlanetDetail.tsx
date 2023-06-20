@@ -8,8 +8,6 @@ export default function PlanetDetail({
   currentPlanet,
   view,
 }: PlanetDetailProps) {
-  console.log(currentPlanet);
-
   const imageUrl =
     view === "overview"
       ? currentPlanet?.images.planet
@@ -26,9 +24,11 @@ export default function PlanetDetail({
 
   return (
     <section className="planet-detail">
-      <img className="planet-detail__img" src={`.${imageUrl}`} />
+      <div className="planet-detail__img-container">
+        <img className="planet-detail__img" src={`.${imageUrl}`} />
+      </div>
       <h1 className="planet-detail__name">{currentPlanet?.name}</h1>
-      <p className="planet-detail__content">{textObj?.content}</p>
+      <p className="planet-detail__text">{textObj?.content}</p>
       <small className="planet-detail__source">
         Source:{" "}
         <a className="planet-detail__source--link" href={textObj?.source}>

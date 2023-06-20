@@ -1,31 +1,52 @@
 import { NavLink, useParams } from "react-router-dom";
 
+import { getPlanetColor } from "../utils";
+
 export default function PlanetSlider() {
   let { planet } = useParams();
   if (!planet) planet = "mercury";
+
   return (
-    <nav className="planet-slider">
+    <nav className="slider">
       <NavLink
-        className={({ isActive }) =>
-          isActive ? "slider-link__active" : "slider-link"
+        style={({ isActive }) =>
+          isActive
+            ? {
+                color: "white",
+                borderBottom: `4px solid ${getPlanetColor(planet)}`,
+              }
+            : { color: "white", opacity: 0.5 }
         }
+        className="slider__link"
         to={`/${planet}`}
         end
       >
         Overview
       </NavLink>
       <NavLink
-        className={({ isActive }) =>
-          isActive ? "slider-link__active" : "slider-link"
+        style={({ isActive }) =>
+          isActive
+            ? {
+                color: "white",
+                borderBottom: `4px solid ${getPlanetColor(planet)}`,
+              }
+            : { color: "white", opacity: 0.5 }
         }
+        className="slider__link"
         to={`/${planet}/structure`}
       >
         Structure
       </NavLink>
       <NavLink
-        className={({ isActive }) =>
-          isActive ? "slider-link__active" : "slider-link"
+        style={({ isActive }) =>
+          isActive
+            ? {
+                color: "white",
+                borderBottom: `4px solid ${getPlanetColor(planet)}`,
+              }
+            : { color: "white", opacity: 0.5 }
         }
+        className="slider__link"
         to={`/${planet}/surface`}
       >
         Surface
