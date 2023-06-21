@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import { Planet as PlanetType } from "../types";
-import PlanetNav from "../components/PlanetNav";
+import PlanetNav from "./PlanetsNav";
 
 type MobileMenuProps = {
   planets: PlanetType[] | null;

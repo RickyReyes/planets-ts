@@ -1,19 +1,24 @@
+/* The PlanetNav component is used in the mobile menu, and also in the tablet design as the planet navigation under the header. 
+
+The two instances of the component look different but have the same functionality. The mobile menu uses the CSS class "mobile-menu" while the other uses "planet-nav".
+*/
+
 import { Planet as PlanetType } from "../types";
 import { Dispatch, SetStateAction } from "react";
 import { Link } from "react-router-dom";
 
-type PlanetNavProps = {
+type PlanetsNavProps = {
   planets: PlanetType[] | null;
   isMobileMenu: boolean;
-  setShowMobileMenu: Dispatch<SetStateAction<boolean>>;
+  setShowMobileMenu?: Dispatch<SetStateAction<boolean>>;
 };
 
-export default function PlanetNav({
+export default function PlanetsNav({
   planets,
   isMobileMenu,
   setShowMobileMenu,
-}: PlanetNavProps) {
-  const cssClass = isMobileMenu ? "mobile-menu" : "planet-nav";
+}: PlanetsNavProps) {
+  const cssClass = isMobileMenu ? "mobile-menu" : "planets-nav";
 
   return (
     <>
@@ -22,7 +27,11 @@ export default function PlanetNav({
           <Link
             to={`/${planet.name.toLowerCase()}`}
             className={`${cssClass}__link`}
-            onClick={() => (isMobileMenu ? setShowMobileMenu(false) : null)}
+            onClick={() =>
+              isMobileMenu && setShowMobileMenu
+                ? setShowMobileMenu(false)
+                : null
+            }
             key={planet.name}
             state={{ planet }}
           >

@@ -1,7 +1,7 @@
 import { useParams, Outlet } from "react-router-dom";
 import { Planet as PlanetType } from "../types";
 import { useState, useEffect } from "react";
-import Stats from "../components/Stats";
+import PlanetStats from "../components/PlanetStats";
 
 export default function Planet() {
   const [currentPlanet, setCurrentPlanet] = useState<PlanetType | null>(null);
@@ -26,7 +26,7 @@ export default function Planet() {
       <div className="planet__detail">
         <Outlet context={{ currentPlanet }} />
       </div>
-      <Stats currentPlanet={currentPlanet} />
+      <PlanetStats currentPlanet={currentPlanet} />
     </section>
   );
 }

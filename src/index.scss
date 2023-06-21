@@ -135,7 +135,7 @@ a {
   }
 }
 
-.planet-nav {
+.planets-nav {
   display: none;
   &__hr {
     display: none;
@@ -169,6 +169,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   &__img-container {
     position: absolute;
     width: 100%;
@@ -186,10 +187,8 @@ a {
     margin-top: 300px;
     text-transform: uppercase;
     font-size: 2.5rem;
-    text-align: center;
   }
   &__text {
-    text-align: center;
     font-family: $font-spartan;
     font-weight: 300;
     font-size: 0.6875rem;
@@ -209,14 +208,15 @@ a {
   }
 }
 
-.stats {
+.planet-stats {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 0.5rem;
   margin: 1.75rem 1.5rem;
 }
-.stat {
+
+.planet-stat {
   list-style-type: none;
   padding: 1rem 1.5rem;
   border: 1px solid rgba(white, 0.2);
@@ -245,10 +245,10 @@ a {
       display: none;
     }
   }
-  .planet-slider {
+  .slider {
     display: none;
   }
-  .planet-nav {
+  .planets-nav {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
@@ -265,5 +265,24 @@ a {
       display: block;
       color: rgba(white, 0.2);
     }
+  }
+
+  .planet-detail {
+    text-align: left;
+    align-items: start;
+    &__name {
+    }
+    &__text {
+      max-width: 37ch;
+    }
+  }
+
+  .planet-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .planet-stat {
+    flex-direction: column;
+    align-items: start;
   }
 }

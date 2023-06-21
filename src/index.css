@@ -103,10 +103,10 @@ a {
   text-decoration: none;
 }
 
-.planet-nav {
+.planets-nav {
   display: none;
 }
-.planet-nav__hr {
+.planets-nav__hr {
   display: none;
 }
 
@@ -135,6 +135,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .planet-detail__img-container {
   position: absolute;
@@ -153,10 +154,8 @@ a {
   margin-top: 300px;
   text-transform: uppercase;
   font-size: 2.5rem;
-  text-align: center;
 }
 .planet-detail__text {
-  text-align: center;
   font-family: "Spartan";
   font-weight: 300;
   font-size: 0.6875rem;
@@ -175,7 +174,7 @@ a {
   text-decoration: underline;
 }
 
-.stats {
+.planet-stats {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -183,7 +182,7 @@ a {
   margin: 1.75rem 1.5rem;
 }
 
-.stat {
+.planet-stat {
   list-style-type: none;
   padding: 1rem 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -192,12 +191,12 @@ a {
   align-items: center;
   text-transform: uppercase;
 }
-.stat--name {
+.planet-stat--name {
   font-size: 0.5rem;
   font-family: "Spartan";
   color: rgba(255, 255, 255, 0.5);
 }
-.stat--number {
+.planet-stat--number {
   font-size: 1.25rem;
 }
 
@@ -212,10 +211,10 @@ a {
   .header__hamburger {
     display: none;
   }
-  .planet-slider {
+  .slider {
     display: none;
   }
-  .planet-nav {
+  .planets-nav {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
@@ -225,12 +224,27 @@ a {
     font-family: "Spartan";
     max-width: 665px;
   }
-  .planet-nav__link {
+  .planets-nav__link {
     font-size: 0.6875rem;
     color: white;
   }
-  .planet-nav__hr {
+  .planets-nav__hr {
     display: block;
     color: rgba(255, 255, 255, 0.2);
+  }
+  .planet-detail {
+    text-align: left;
+    align-items: start;
+  }
+  .planet-detail__text {
+    max-width: 37ch;
+  }
+  .planet-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .planet-stat {
+    flex-direction: column;
+    align-items: start;
   }
 }/*# sourceMappingURL=index.css.map */
