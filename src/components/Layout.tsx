@@ -2,7 +2,7 @@ import { Planet } from "../types";
 
 import { Dispatch, SetStateAction } from "react";
 import Header from "../components/Header";
-import PlanetSlider from "../components/PlanetSlider";
+import PlanetView from "../components/PlanetView";
 import PlanetsNav from "../components/PlanetsNav";
 import { Outlet } from "react-router-dom";
 
@@ -14,7 +14,7 @@ export default function Layout({ planets, setShowMobileMenu }: IHeaderProps) {
   return (
     <>
       <Header setShowMobileMenu={setShowMobileMenu} />
-      <PlanetSlider />
+      <PlanetView tabletSlider={false} />
       <PlanetsNav planets={planets} isMobileMenu={false} />
       <Outlet />
     </>

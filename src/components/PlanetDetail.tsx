@@ -1,4 +1,6 @@
 import { Planet } from "../types";
+import PlanetView from "./PlanetView";
+
 type PlanetDetailProps = {
   currentPlanet: Planet | null;
   view: string;
@@ -27,14 +29,21 @@ export default function PlanetDetail({
       <div className="planet-detail__img-container">
         <img className="planet-detail__img" src={`.${imageUrl}`} />
       </div>
-      <h1 className="planet-detail__name">{currentPlanet?.name}</h1>
-      <p className="planet-detail__text">{textObj?.content}</p>
-      <small className="planet-detail__source">
-        Source:{" "}
-        <a className="planet-detail__source--link" href={textObj?.source}>
-          Wikipedia
-        </a>
-      </small>
+      <div className="planet-detail__flex">
+        <div className="planet-detail__flex--left">
+          <h1 className="planet-detail__name">{currentPlanet?.name}</h1>
+          <p className="planet-detail__text">{textObj?.content}</p>
+          <small className="planet-detail__source">
+            Source:{" "}
+            <a className="planet-detail__source--link" href={textObj?.source}>
+              Wikipedia
+            </a>
+          </small>
+        </div>
+        <div className="planet-detail__flex--right">
+          <PlanetView tabletSlider={true} />
+        </div>
+      </div>
     </section>
   );
 }

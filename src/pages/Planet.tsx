@@ -23,9 +23,7 @@ export default function Planet() {
   if (!currentPlanet) return <h1>Loading...</h1>;
   return (
     <section className="planet">
-      <div className="planet__detail">
-        <Outlet context={{ currentPlanet }} />
-      </div>
+      <Outlet context={{ currentPlanet }} />
       <PlanetStats currentPlanet={currentPlanet} />
     </section>
   );
