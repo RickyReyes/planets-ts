@@ -10,10 +10,15 @@ export default function PlanetView({ tabletSlider }: PlanetSliderProps) {
   let { planet } = useParams();
   if (!planet) planet = "mercury";
 
-  const activeStyles = {
-    color: "white",
-    borderBottom: `4px solid ${getPlanetColor(planet)}`,
-  };
+  const activeStyles = tabletSlider
+    ? {
+        backgroundColor: `${getPlanetColor(planet)}`,
+        color: "white",
+      }
+    : {
+        color: "white",
+        borderBottom: `4px solid ${getPlanetColor(planet)}`,
+      };
   const inactiveStyles = { color: "white", opacity: 0.5 };
 
   const cssClass = tabletSlider ? "tablet-slider" : "mobile-slider";
@@ -25,21 +30,30 @@ export default function PlanetView({ tabletSlider }: PlanetSliderProps) {
         to={`/${planet}`}
         end
       >
-        {cssClass == "tablet-slider" && "01 "}Overview
+        {cssClass == "tablet-slider" && (
+          <span className="tablet-slider__num">01</span>
+        )}
+        Overview
       </NavLink>
       <NavLink
         style={({ isActive }) => (isActive ? activeStyles : inactiveStyles)}
         className={`${cssClass}__link`}
         to={`/${planet}/structure`}
       >
-        {cssClass == "tablet-slider" && "02 "}Structure
+        {cssClass == "tablet-slider" && (
+          <span className="tablet-slider__num">02</span>
+        )}
+        Structure
       </NavLink>
       <NavLink
         style={({ isActive }) => (isActive ? activeStyles : inactiveStyles)}
         className={`${cssClass}__link`}
         to={`/${planet}/surface`}
       >
-        {cssClass == "tablet-slider" && "03 "}Surface
+        {cssClass == "tablet-slider" && (
+          <span className="tablet-slider__num">03</span>
+        )}
+        Surface
       </NavLink>
     </nav>
   );

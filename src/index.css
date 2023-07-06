@@ -41,7 +41,7 @@ a {
   border-radius: 100%;
 }
 .mobile-menu__item__bullet.mercury {
-  background-color: #def4fc;
+  background-color: #419ebb;
 }
 .mobile-menu__item__bullet.venus {
   background-color: #f7cc7f;
@@ -232,8 +232,17 @@ a {
     gap: 1rem;
   }
   .tablet-slider__link {
+    font-family: "Spartan";
+    font-size: 0.5625rem;
+    font-weight: bold;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 0.5rem 1.25rem;
+    padding: 0.9rem 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1.93px;
+    width: 281px;
+  }
+  .tablet-slider__num {
+    padding-right: 0.875rem;
   }
   .planets-nav {
     display: flex;

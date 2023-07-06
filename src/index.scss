@@ -2,7 +2,6 @@ $white: #fff;
 $black-600: #070724;
 $grey-600: #38384f;
 $grey-400: #838391;
-$teal: #419ebb;
 $yellow: #eda249;
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
@@ -14,7 +13,7 @@ $orange: #cd5120;
 $green: #1ec2a4;
 $blue: #2d68f0;
 
-$mercury: #def4fc;
+$mercury: #419ebb;
 $venus: #f7cc7f;
 $earth: #545bfe;
 $mars: #ff6a45;
@@ -267,8 +266,17 @@ a {
     flex-direction: column;
     gap: 1rem;
     &__link {
+      font-family: $font-spartan;
+      font-size: 0.5625rem;
+      font-weight: bold;
       border: 1px solid rgba(white, 0.2);
-      padding: 0.5rem 1.25rem;
+      padding: 0.9rem 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 1.93px;
+      width: 281px;
+    }
+    &__num {
+      padding-right: 0.875rem;
     }
   }
   .planets-nav {

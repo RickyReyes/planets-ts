@@ -3,7 +3,7 @@
 export function getPlanetColor(planet: string | undefined) {
   switch (planet) {
     case "mercury":
-      return "#def4fc";
+      return "#419ebb";
       break;
     case "venus":
       return "#f7cc7f";
